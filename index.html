@@ -1,84 +1,207 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>ACT</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-codepen"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>ACT</h1>
-								<p>Automatic Conformance Checker Tool<br /></p>
-								
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#download">Download</a></li>
-								<!--<li><a href="#code">Code</a></li>-->
-								<!--<li><a href="#contact">Contact</a></li>-->
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-				<!-- Main -->
-					<div id="main">
+  <title>VTool</title>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>								
-								<p>This is a model based tool for check conformance between an implementation and specification model.</p>								
-							</article>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-						<!-- Download -->
-							<article id="download">
-								<h2 class="major">Download</h2>								
-								<p>The tool was developed in Java and is available for <a href="https://drive.google.com/open?id=1fyeNjfk67ncEofMMWuaEmB66KMWsQMJJ">download.</a> </p>								
-							</article>
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-						<!-- Code -->
-							<!--<article id="code">
-								<h2 class="major">Code</h2>								
-								<p>The source code can be accessed by this link.</p>
-							</article>-->
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
 
-					</div>
+</head>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<!--<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>-->
-					</footer>
+<body id="page-top">
 
-			</div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">VTool</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Executable and Code</a>
+          </li>         
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#documentation">Documentation</a>
+          </li>     
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#examples">Exemples</a>
+          </li>       
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-		<!-- BG -->
-			<div id="bg"></div>
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">VTool</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A Verification Tool</h2>       
+      </div>
+    </div>
+  </header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <!-- About Section -->
+  <section id="about" class="about-section  bg-dark">
+    <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <h2 class="text-white mb-4">VTool</h2>  
+            <p class="text-white-50">Is a model based tool for check conformance between an implementation and specification model. </p> 
+            <p class="text-white-50">This tool implement de classical conformance IOCO and a more general conformance based on language that find fault that IOCO don't detect.</p>             
+          </div>
+      </div>
+    </div>
+  </section>
 
-	</body>
+  <!-- Download Section -->
+  <section id="download" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/program.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Executable</h4>
+            <p class="text-black-50 mb-0">The tool was developed in Java and the executable is available for download <a href="download/executable/vtool.jar">click here.</a> </p>
+          </div>
+
+          <div class="featured-text text-center text-lg-left">
+            <h4>Source Code</h4>
+            <p class="text-black-50 mb-0">The source code is available on gitlab <a href="https://gitlab.com/camila.gomes/mbt/" class="mx-2">click here.</a>  </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Section -->
+  <section id="documentation" class="contact-section bg-black">
+     <div class="container">
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-5 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/toolArchitecture.png" alt="">
+        </div>
+        <div class="col-xl-1 col-lg-7"></div>
+        <div class="col-xl-6 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4 class="text-white-50">Tool Architeture</h4>
+              <p class="text-white-50 mb-0">The rectangles represents the modules of tool, the inclined rectangles are inputs and outputs produced by program, the labels on arrow denotes data exchange between modules. </p>
+
+               <p class="text-white-50 mb-0">Graphic library Swing of Java was used in order to create the view module of tool, the accepted inputs are: (i) kind of conformance that is IOCO or based on language; (ii) regex that specify the desirable and undesirable behavior of implementation; (iii) type of model IOLTS or LTS, if IOLTS needs to be informed how distingues the input and output labels; (iv) formal model of implementation and specification in Aldebaran format with .aut extension. </p>
+
+               <p class="text-white-50 mb-0">The parses module extracts the IOLTS/LTS model from .aut file verifying if the mode is valid. The automaton construction module  get underlying automaton from IOLTS/LTS model and also the automaton that recognize the regex received by view. The last  conformance verification module realize operation between automatons and verify the conformance between implementation and specification, the conformance can be IOCO or based on language.
+               </p>
+          </div>         
+        </div>
+      </div>
+    
+   <div class="row align-items-center no-gutters mb-4 mb-lg-5">                
+        <div class="col-xl-6 col-lg-5">
+          <div class="featured-text text-center text-lg-right">
+            <h4 class="text-white-50">Aldebaran file (.aut)</h4>
+              <p class="text-white-50 mb-0">Next to has an example from Aldebaran file and the correspondent IOLTS, the input label has the tag '?' and the output label has '!'. </p>
+
+               <p class="text-white-50 mb-0">On the header of file is defined the initial state s0, the number of transition that is 9 and the number of state that is 4. </p>              
+          </div>         
+        </div>
+
+        <div class="col-xl-1 col-lg-7"></div>
+
+        <div class="col-xl-5 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/autModel.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-1 col-lg-7"></div>
+        <div class="col-xl-4 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/program.png" alt="">
+        </div>
+        <div class="col-xl-1 col-lg-7"></div>
+        <div class="col-xl-5 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4 class="text-white-50">Tool View</h4>
+              <p class="text-white-50 mb-0">Fields: </p>
+              <ul>
+                <li class="text-white-50"> <b>Conformance:</b> conformance verification is based on language or IOCO;</li>
+                <li class="text-white-50"> <b>Kind of models:</b> the models of implementation and specification are IOLTS ou LTS;</li>
+                <li class="text-white-50"> <b>Label:</b> if model is IOLTS must inform how distinguish the inputs and output label, it's possible do automatically if .aut file contains label with tag '!' and '?', or  inputs and outputs labels can be manually informed;</li>
+                <li class="text-white-50"><b>Input/output:</b>this field will appear if is choose inform manually the input and output labels of IOLTS;</li>
+                <li class="text-white-50"><b>Implementation:</b>inform the path where the implementation model is in .aut file</li>
+                <li class="text-white-50"><b>Model:</b>inform the path where the specification model is in .aut file</li>
+                <li class="text-white-50"><b>Language D:</b>can be filled if the conformance based on language is chosen, represents the desired behavior of implementation express in regex;</li>
+                <li class="text-white-50"><b>Language F:</b>can be filled if the conformance based on language is chosen, represents the undesired behavior of implementation express in regex;</li>
+                <li class="text-white-50"><b>Verify conformance:</b>clicking on the button will verify that the implementation complies with the specification;</li>
+                <li class="text-white-50"><b>Result:</b>will inform the verdict whether or not the models  conforms</li>
+                <li class="text-white-50"><b>Detail:</b>will show the test cases that prove the nonconformity between an implementation and an implementation, in addition to the paths covered by the models when applying each of the test cases</li>
+            </ul>
+          </div>         
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="examples" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+       <div class="col-lg-8 mx-auto">
+          <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <h2 class="text-black mb-4">Examples</h2>       
+          </div>
+           <p>With this models the tool returns that they are IOCO conforms, but  with the conformance based on language using D=(a+b)*ax and F being empty the veredict is not conforms, and the test cases generate are fababax; abaabax; abaaabax.</p>
+           <p class="text-black-50"> Specification: <a href="download/aut/iolts-spec.aut" target="_blank">model of .aut  IOLTS.</a> </p> 
+           <p class="text-black-50"> Implementation:<a href="download/aut/iolts-impl.aut" target="_blank">model of .aut  IOLTS.</a> </p> 
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; VTool 2019
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+</body>
+
 </html>
