@@ -39,14 +39,14 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">Executable and Code</a>
-          </li>         
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#documentation">Documentation</a>
-          </li>     
+          </li>
            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#examples">Exemples</a>
-          </li>       
+            <a class="nav-link js-scroll-trigger" href="#examples">Exemples "melhor deixar só downloads, tanto exemplos qto binario, ou ainda deixar os exemplos no link Documentation."</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -57,7 +57,7 @@
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">VTool</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">A Verification Tool</h2>       
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A Verification Tool</h2>
       </div>
     </div>
   </header>
@@ -67,9 +67,10 @@
     <div class="container">
         <div class="col-lg-8 mx-auto">
           <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            <h2 class="text-white mb-4">VTool</h2>  
-            <p class="text-white-50">Is a model based tool for check conformance between an implementation and specification model. </p> 
-            <p class="text-white-50">This tool implement de classical conformance IOCO and a more general conformance based on language that find fault that IOCO don't detect.</p>             
+            <h2 class="text-white mb-4">VTool</h2>
+            <p class="text-white-50">Vtool is an automatic conformance verification tool for testing reactive systems.
+              Implementations can be checked against their respective specifications based on a more genral conformance relation using regular languagens.
+              The classical IOCO relation is a particular case of the new conformance realtion and it is also provided by the tool. </p>
           </div>
       </div>
     </div>
@@ -86,13 +87,14 @@
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4>Executable</h4>
-            <p class="text-black-50 mb-0">The tool was developed in Java and the executable is available for download <a href="download/executable/vtool.jar">click here.</a> </p>
+            <h4>Bytecode</h4>
+            <p class="text-black-50 mb-0">Vtool is developed in Java and the Bytecode is available for download <a href="download/executable/vtool.jar">click here.</a> </p>
           </div>
+
 
           <div class="featured-text text-center text-lg-left">
             <h4>Source Code</h4>
-            <p class="text-black-50 mb-0">The source code is available on gitlab <a href="https://github.com/actool/vtool" class="mx-2">click here.</a>  </p>
+            <p class="text-black-50 mb-0">The source code is available on the Gitlab Repository <a href="https://github.com/actool/vtool" class="mx-2">click here.</a>  </p>
           </div>
 
         </div>
@@ -111,25 +113,29 @@
         <div class="col-xl-1 col-lg-7"></div>
         <div class="col-xl-6 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4 class="text-white-50">Tool Architeture</h4>
-              <p class="text-white-50 mb-0">The rectangles represents the modules of tool, the inclined rectangles are inputs and outputs produced by program, the labels on arrow denotes data exchange between modules. </p>
-
-               <p class="text-white-50 mb-0">Graphic library Swing of Java was used in order to create the view module of tool, the accepted inputs are: (i) kind of conformance that is IOCO or based on language; (ii) regex that specify the desirable and undesirable behavior of implementation; (iii) type of model IOLTS or LTS, if IOLTS needs to be informed how distingues the input and output labels; (iv) formal model of implementation and specification in Aldebaran format with .aut extension. </p>
-
-               <p class="text-white-50 mb-0">The parses module extracts the IOLTS/LTS model from .aut file verifying if the mode is valid. The automaton construction module  get underlying automaton from IOLTS/LTS model and also the automaton that recognize the regex received by view. The last  conformance verification module realize operation between automatons and verify the conformance between implementation and specification, the conformance can be IOCO or based on language.
+            <h4 class="text-white-50">Development</h4>
+              <p class="text-white-50 mb-0"> Vtool is developed in Java and composed by four modules: View, Parser, Automaton Construction and Conformance Verification.
+                Arrows indicate the data flow among the modules. </p>
+                <p class="text-white-50 mb-0">  The Swing library is used in the View module to create the interface that deals with input and output data.
+                The user can provide IUTs and specification models in Aldebaran format, the conformance veficiation mode, IOCO or language-based, and also the regular expressions that model (un)desirable behaviors.
+                Verdicts of conformance testing and the associated details are produced by the tool. </p>
+               <p class="text-white-50 mb-0">The Parser module checks if the IUT and the specification models given in .aut files are valid.
+                 The Automaton construction module (A ver ainda quais operacoes e construcoes estao neste modulo) get underlying automaton from IOLTS/LTS model and also the automaton that recognize the regex received by view.
+                 The process of checking conformance between IUT and specification is performed by the Conformance verification module.
                </p>
-          </div>         
+          </div>
         </div>
       </div>
-    
-   <div class="row align-items-center no-gutters mb-4 mb-lg-5">                
+
+   <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-6 col-lg-5">
           <div class="featured-text text-center text-lg-right">
-            <h4 class="text-white-50">Aldebaran file (.aut)</h4>
-              <p class="text-white-50 mb-0">Next to has an example from Aldebaran file and the correspondent IOLTS, the input label has the tag '?' and the output label has '!'. </p>
+            <h4 class="text-white-50">Aldebaran format (.aut)</h4>
+              <p class="text-white-50 mb-0"> An example of Aldebaran file format and its corresponding model.
+                Input labels are tagged by '?' an output labels are tagged by '!'. </p>
 
-               <p class="text-white-50 mb-0">On the header of file is defined the initial state s0, the number of transition that is 9 and the number of state that is 4. </p>              
-          </div>         
+               <p class="text-white-50 mb-0">The header indicates the initial state, the number of transitions and the number of states, respectively. (E cada linha indica uma transicao? pode ser na frente, so separado por espacos? e a transicao é como? uma tupla (s,a,p), onde s é origem, a o rotulo e p o destino?) </p>
+          </div>
         </div>
 
         <div class="col-xl-1 col-lg-7"></div>
@@ -148,7 +154,7 @@
         <div class="col-xl-1 col-lg-7"></div>
         <div class="col-xl-5 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4 class="text-white-50">Tool View</h4>
+            <h4 class="text-white-50">Interface (a ver devido as mudancas da interface. )</h4>
               <p class="text-white-50 mb-0">Fields: </p>
               <ul>
                 <li class="text-white-50"> <b>Conformance:</b> conformance verification is based on language or IOCO;</li>
@@ -163,7 +169,7 @@
                 <li class="text-white-50"><b>Veredict:</b>will inform the verdict whether or not the models  conforms</li>
                 <li class="text-white-50"><b>Show test cases:</b>will show the test cases that prove the nonconformity between an implementation and an implementation, in addition to the paths covered by the models when applying each of the test cases</li>
             </ul>
-          </div>         
+          </div>
         </div>
       </div>
     </div>
@@ -175,11 +181,11 @@
       <!-- Featured Project Row -->
        <div class="col-lg-8 mx-auto">
           <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            <h2 class="text-black mb-4">Examples</h2>       
+            <h2 class="text-black mb-4">Run an example</h2>
           </div>
-           <p>With this models the tool returns that they are IOCO conforms, but  with the conformance based on language using D=(a+b)*ax and F being empty the veredict is not conforms, and the test cases generate are fababax; abaabax; abaaabax.</p>
-           <p class="text-black-50"> Specification: <a href="download/aut/iolts-spec.aut" target="_blank">model of .aut  IOLTS.</a> </p> 
-           <p class="text-black-50"> Implementation:<a href="download/aut/iolts-impl.aut" target="_blank">model of .aut  IOLTS.</a> </p> 
+           <p> Running the With this models the tool returns that they are IOCO conforms, but  with the conformance based on language using D=(a+b)*ax and F being empty the veredict is not conforms, and the test cases generate are fababax; abaabax; abaaabax.</p>
+           <p class="text-black-50"> Specification: <a href="download/aut/iolts-spec.aut" target="_blank">model of .aut  IOLTS.</a> </p>
+           <p class="text-black-50"> Implementation:<a href="download/aut/iolts-impl.aut" target="_blank">model of .aut  IOLTS.</a> </p>
       </div>
 
     </div>
