@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>VTool</title>
+  <title>Everest</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">VTool</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -42,7 +42,7 @@
             <a class="nav-link js-scroll-trigger" href="#documentation">Documentation</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#examples">Exemples "melhor deixar só downloads, tanto exemplos qto binario, ou ainda deixar os exemplos no link Documentation."</a>
+            <!--<a class="nav-link js-scroll-trigger" href="#examples">Exemples</a>-->
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#download">Download</a>
@@ -56,8 +56,8 @@
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">VTool</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">A Verification Tool</h2>
+        <h1 class="mx-auto my-0 text-uppercase">Everest</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">conformancE Verification on tEsting ReactivE SysTems</h2>
       </div>
     </div>
   </header>
@@ -67,8 +67,8 @@
     <div class="container">
         <div class="col-lg-8 mx-auto">
           <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            <h2 class="text-white mb-4">VTool</h2>
-            <p class="text-white-50">Vtool is an automatic conformance verification tool for testing reactive systems.
+            <h2 class="text-white mb-4">Everest</h2>
+            <p class="text-white-50">Everest is an automatic conformance verification tool for testing reactive systems.
               Implementations can be checked against their respective specifications based on a more genral conformance relation using regular languagens.
               The classical IOCO relation is a particular case of the new conformance realtion and it is also provided by the tool. </p>
           </div>
@@ -88,13 +88,21 @@
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
             <h4>Bytecode</h4>
-            <p class="text-black-50 mb-0">Vtool is developed in Java and the Bytecode is available for download <a href="download/executable/vtool.jar">click here.</a> </p>
+            <p class="text-black-50 mb-0">Everest is developed in Java and the Bytecode is available for download <a href="download/executable/vtool.jar">click here.</a> </p>
           </div>
 
 
           <div class="featured-text text-center text-lg-left">
             <h4>Source Code</h4>
             <p class="text-black-50 mb-0">The source code is available on the Gitlab Repository <a href="https://github.com/actool/vtool" class="mx-2">click here.</a>  </p>
+          </div>
+
+          <div class="featured-text text-center text-lg-left">                
+            <h4>Run an example</h4>  
+            <p style="color: blue"> Alterei parágrafo abaixo, tirei a aba de Exemplo<p>                    
+             <p class="text-black-50 mb-0"> Running the verification with this models the tool returns that they are IOCO conforms, but  with the conformance based on language using D=(a+b)*ax and F being empty the veredict is not conforms, and the test cases generate are fababax; abaabax; abaaabax.</p>
+             <p class="text-black-50 mb-0"> > Specification: <a href="download/aut/iolts-spec.aut" target="_blank">model of .aut  IOLTS.</a> </p>
+             <p class="text-black-50 mb-0"> > Implementation:<a href="download/aut/iolts-impl.aut" target="_blank">model of .aut  IOLTS.</a> </p>
           </div>
 
         </div>
@@ -114,7 +122,7 @@
         <div class="col-xl-6 col-lg-5">
           <div class="featured-text text-center text-lg-left">
             <h4 class="text-white-50">Development</h4>
-              <p class="text-white-50 mb-0"> Vtool is developed in Java and composed by four modules: View, Parser, Automaton Construction and Conformance Verification.
+              <p class="text-white-50 mb-0"> Everest is developed in Java and composed by four modules: View, Parser, Automaton Construction and Conformance Verification.
                 Arrows indicate the data flow among the modules. </p>
                 <p class="text-white-50 mb-0">  The Swing library is used in the View module to create the interface that deals with input and output data.
                 The user can provide IUTs and specification models in Aldebaran format, the conformance veficiation mode, IOCO or language-based, and also the regular expressions that model (un)desirable behaviors.
@@ -133,8 +141,10 @@
             <h4 class="text-white-50">Aldebaran format (.aut)</h4>
               <p class="text-white-50 mb-0"> An example of Aldebaran file format and its corresponding model.
                 Input labels are tagged by '?' an output labels are tagged by '!'. </p>
+               <p class="text-white-50 mb-0">The header indicates the initial state, the number of transitions and the number of states, respectively. </p>
+                <p class="text-white-50 mb-0">Each line below the header is a transition, which is defined as a tuple (s,l,p), where 's' is source state, 'l' is the label of transition and 'p' is the target state </p>
 
-               <p class="text-white-50 mb-0">The header indicates the initial state, the number of transitions and the number of states, respectively. (E cada linha indica uma transicao? pode ser na frente, so separado por espacos? e a transicao é como? uma tupla (s,a,p), onde s é origem, a o rotulo e p o destino?) </p>
+              <p style="color: red"> (E cada linha indica uma transicao? pode ser na frente, so separado por espacos? e a transicao é como? uma tupla (s,a,p), onde s é origem, a o rotulo e p o destino?) </p> <p style="color: paleturquoise">coloquei parágrafo acima</p>
           </div>
         </div>
 
@@ -154,7 +164,7 @@
         <div class="col-xl-1 col-lg-7"></div>
         <div class="col-xl-5 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4 class="text-white-50">Interface (a ver devido as mudancas da interface. )</h4>
+            <h4 class="text-white-50">Interface</h4> <p style="color: red">a ver devido as mudancas da interface. <p>
               <p class="text-white-50 mb-0">Fields: </p>
               <ul>
                 <li class="text-white-50"> <b>Conformance:</b> conformance verification is based on language or IOCO;</li>
@@ -175,10 +185,10 @@
     </div>
   </section>
 
-   <section id="examples" class="projects-section bg-light">
+   <!--<section id="examples" class="projects-section bg-light">
     <div class="container">
 
-      <!-- Featured Project Row -->
+      
        <div class="col-lg-8 mx-auto">
           <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <h2 class="text-black mb-4">Run an example</h2>
@@ -189,12 +199,12 @@
       </div>
 
     </div>
-  </section>
+  </section>-->
 
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; VTool 2019
+      Copyright &copy; Everest 2019
     </div>
   </footer>
 
