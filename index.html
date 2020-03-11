@@ -68,10 +68,11 @@
         <div class="col-lg-8 mx-auto">
           <div class="row align-items-center no-gutters mb-4 mb-lg-5">
             <h2 class="text-white mb-4">Everest</h2>
-            <p class="text-white-50">Everest is a practical tool to check whether an implementation complies with its respective specification and also generate complete test suites. The conformance checking is provided in a white-box testing mode, where the internal implementation behavior is known, and the complete test suite generation when testing implementations in a black-box scenery.
+            <p class="text-white-50">Everest is a practical tool to check whether an implementation complies with its respective specification, and also generate complete test suites. The conformance checking is provided in a white-box testing mode, where the internal implementation behavior is known.            	
             	<!--is an automatic conformance verification tool for testing reactive systems.-->
               Implementations can be checked against their respective specifications based on a more general conformance relation using regular languages.
-              The classical IOCO relation is a particular case of the new conformance relation and it is also provided by the tool. </p>
+              The classical IOCO relation is a particular case of the new conformance relation and it is also provided by the tool. Moreover, our tool
+can generate test suites in practical black-box testing scenarios.</p>
           </div>
       </div>
     </div>
@@ -92,11 +93,11 @@
                 <p class="text-black-50 mb-0">  The Swing library is used in the <b>View module</b> to create the interface that deals with input and output data.
                 The user can provide IUTs and specification models in Aldebaran format, the conformance verification mode, IOCO or language-based,
 				<!--and also--> 
-				the regular expressions that model (un)desirable behaviors, and the number of test cases to be generated. Verdicts of conformance testing and the associated details are produced by the tool on conformance verification. In the test suite generation should also be informed  an upper bound on the number of states of implementations to be covered, multi-graph and TPs can also be provided for the test generation and execution.
+				the regular expressions that model (un)desirable behaviors, and the number of test cases to be generated. Verdicts of conformance testing and the associated details are produced by the tool on conformance verification. In the test suite generation can also be informed  an upper bound on the number of states of implementations to be covered, multi-graph and TPs can also be provided for the test generation and execution.
                  </p>
-               <p class="text-black-50 mb-0">The <b>Parser module</b> checks if the IUT and the specification models given in .aut files are valid.
+               <p class="text-black-50 mb-0">The <b>Parser module</b> checks if the IUT and the specification models given in Aldebaran files are valid.
                  The <b>Automaton construction module</b> gets underlying automaton from IOLTS/LTS model and also the automaton that recognizes the regex received by the view.
-                 The process of checking conformance between IUT and specification and test generation/run is performed by the <b>Conformance verification module</b>.
+                 The process of checking conformance between IUT and specification, and test generation/run is performed by the <b>Verification & Generation module</b>.
                </p>
           </div>
         </div>
@@ -200,8 +201,8 @@
 	              	<li class="text-black-50"><b>view model/view IUT:</b> graphically display the model and IUT;</li>
 	              	<li class="text-black-50"><b>input labels/output labels:</b> partitioning between input and output labels;</li>
 	              	<li class="text-black-50"><b>#Max IUT states:</b> upper bound on the number of states of black-box implementations to be covered;</li>	                
-	                <li class="text-black-50"><b># Test cases:</b> the number of test cases to be generated in case of non-conformance verdict </li>
-	              	<li class="text-black-50"><b>Multigraph:</b> the path where  the multigraph is in .aut file to generate and run the tests;</li>
+	                <li class="text-black-50"><b># Test purpose:</b> the number of test purposes to be generated in case of non-conformance verdict;</li>
+	              	<li class="text-black-50"><b>Multigraph:</b> the path where  the multigraph is (.aut file) to generate and run the tests;</li>
 	              	<li class="text-black-50"><b>Test purpose folder:</b> the directory containing the test purposes to be run;</li>
 
 	              	<li class="text-black-50"><b>Generate:</b> clicking on the button will generate the multigraph;</li>
@@ -342,7 +343,7 @@
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
  <div class="col-xl-5 col-lg-5">        
           <div class="featured-text text-center text-lg-left">                                                                  	
-             	<p class="text-black-50"><b>Example 3a:</b> The mutigraph generation using specification S, the coverage of implementations with up to 4 states.
+             	<p class="text-black-50"><b>Example 3a:</b> The mutigraph generation using specification S, and the coverage of implementations with up to 4 states.
              	</p>             	
              </ul>                  
           </div>
@@ -363,7 +364,7 @@
 
         <div class="col-xl-5 col-lg-5">        
           <div class="featured-text text-center text-lg-left">                                                                  	
-             	<p class="text-black-50"><b>Example 3b:</b> The test purpose generation using multigraph (generated in Example 3a) and run on implementation R. The tool detected a fault when generated and executed the third test cases.
+             	<p class="text-black-50"><b>Example 3b:</b> The test purpose generation using multigraph (generated in Example 3a) and run on implementation R. The tool detected a fault when generated and executed the third test purpose.
              	</p>
              </ul>                  
           </div>    
@@ -391,7 +392,7 @@
 
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; Everest 2029
+      Copyright &copy; Everest 2020
     </div>
   </footer>
 
